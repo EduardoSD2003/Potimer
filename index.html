@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="lobo.jpg" type="image/x-icon">
+    <script src="app.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Potimer</title>
+  </head>
+  <body>
+    <header id="frase" class="frase"></header>
+    <div class="conteudos">
+      <section class="principal">
+        <div class="toDoContainer">
+          <h1 class="toDoTitulo">To-Do list</h1>
+          <form id="novaTarefa">
+            <input
+              type="text"
+              id="novaTarefaInput"
+              placeholder="Escreva a nova tarefa"
+            />
+
+            <input type="submit" value="Adcionar" id="novaTarefaSubmit" />
+          </form>
+
+          <h2 id="TituloTarefas">Tarefas</h2>
+          <section class="listaTarefas" id="lista">
+            <!-- <div class="tarefas">
+              <div class="tarefa">
+                <div class="conteudo">
+                  <input
+                    type="text"
+                    class="texto"
+                    id="texto"
+                    value="Minha tarefa1"
+                    readonly
+                  />
+                </div>
+                <div class="botoes">
+                  <button class="editar">Editar</button>
+                  <button class="deletar">Deletar</button>
+                </div>
+              </div>
+            </div> -->
+          </section>
+        </div>
+      </section>
+      <section class="pomodoro">
+        <div class="timerConfig">
+          <i class="fa-solid fa-clock" id="timerConfigIcon"></i>
+        </div>
+
+        <div class="configContainer" id="configContainer">
+          <div class="configInputs">          
+            <label for="pomodoroH">Pomodoro</label>
+            <input type="number" id="pomodoroH" value="" min="0" max="24" placeholder="Em horas">
+            <label for="pomodoroM">Pomodoro</label>
+            <input type="number" id="pomodoroM" value="" min="0" max="60" placeholder="Em minutos">
+            <label for="pausaC">Pausa Curta</label>
+            <input type="number" id="pausaC" value="" min="0" max="60" placeholder="Em minutos">
+            <label for="pausaLo">Pausa longa</label>
+            <input type="number" id="pausaLo" value="" min="0" max="60" placeholder="Em minutos">
+          </div>
+        </div>
+
+        <div class="circle-container">
+          <div class="outermost-circle"></div>
+        </div>
+
+        <div class="timerContainer">
+          <div class="timer"></div>
+        </div>
+        
+        <button class="botaoMusica"><i class="fa-solid fa-play"></i></button>
+        <div class="botoesContainer">
+          <button class="botaoPomodoro" id="pomodoro">Pomodoro</button>
+          <button class="botaoPomodoro" id="pausaCurta">Pausa curta</button>
+          <button class="botaoPomodoro" id="pausaLonga">Pausa longa</button>
+          <button class="botaoPomodoro" id="pausar">Pausar</button>
+        </div>
+      </section>
+    </div>
+    <audio src="lCCESmq9-vs.mp3" id="audio"></audio>
+  </body>
+</html>
